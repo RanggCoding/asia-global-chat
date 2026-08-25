@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070a12"><meta name="description" content="One realtime chat room for people across Asia.">
+<title>Asia — Global Chat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<main class="app">
+<section id="loginView" class="welcome">
+  <div class="welcome-top"><div class="brand"><div class="globe">🌏</div><span>ASIA</span></div><div class="live-pill"><i></i> LIVE</div></div>
+  <div class="hero">
+    <div class="orb"><span class="orb-ring ring-1"></span><span class="orb-ring ring-2"></span>
+      <span class="orb-dot dot-1">🇮🇩</span><span class="orb-dot dot-2">🇯🇵</span><span class="orb-dot dot-3">🇰🇷</span><span class="orb-dot dot-4">🇮🇳</span><span class="orb-core">🌏</span>
+    </div>
+    <p class="kicker">ONE ROOM • EVERYONE</p><h1>Meet Asia.<br><em>Talk freely.</em></h1>
+    <p class="hero-copy">A single realtime room for conversations across Asia.</p>
+  </div>
+  <form id="joinForm" class="join-card">
+    <div class="field"><label for="nameInput">DISPLAY NAME</label><input id="nameInput" maxlength="24" autocomplete="nickname" placeholder="How should people call you?" required></div>
+    <div class="field"><label for="countryInput">FROM</label>
+      <select id="countryInput">
+        <option value="🇮🇩 Indonesia">🇮🇩 Indonesia</option><option value="🇲🇾 Malaysia">🇲🇾 Malaysia</option><option value="🇸🇬 Singapore">🇸🇬 Singapore</option>
+        <option value="🇯🇵 Japan">🇯🇵 Japan</option><option value="🇰🇷 South Korea">🇰🇷 South Korea</option><option value="🇵🇭 Philippines">🇵🇭 Philippines</option>
+        <option value="🇹🇭 Thailand">🇹🇭 Thailand</option><option value="🇻🇳 Vietnam">🇻🇳 Vietnam</option><option value="🇮🇳 India">🇮🇳 India</option>
+        <option value="🇨🇳 China">🇨🇳 China</option><option value="🇹🇼 Taiwan">🇹🇼 Taiwan</option><option value="🇭🇰 Hong Kong">🇭🇰 Hong Kong</option>
+        <option value="🇵🇰 Pakistan">🇵🇰 Pakistan</option><option value="🇧🇩 Bangladesh">🇧🇩 Bangladesh</option><option value="🇱🇰 Sri Lanka">🇱🇰 Sri Lanka</option>
+        <option value="🌏 Other Asia">🌏 Other Asia</option>
+      </select>
+    </div>
+    <button class="join-btn" type="submit"><span>Join the conversation</span><b>→</b></button>
+    <p class="privacy-note">Public room · Don't share passwords, addresses, or private information.</p>
+  </form>
+</section>
+
+<section id="chatView" class="chat hidden">
+  <header class="chat-top"><div class="room"><div class="room-avatar">🌏</div><div><div class="room-name">Asia</div><div class="room-status"><span></span><strong id="onlineCount">0</strong> people online</div></div></div>
+  <button id="leaveBtn" class="round-btn" aria-label="Leave chat" title="Leave">↗</button></header>
+  <div id="connectionBanner" class="connection hidden"></div>
+  <div id="messages" class="messages" aria-live="polite"></div>
+  <div class="chat-bottom"><div id="typing" class="typing hidden">Someone is typing…</div>
+    <form id="messageForm" class="composer"><button id="emojiBtn" type="button" class="tool-btn" aria-label="Emoji">☺</button>
+      <div class="input-box"><textarea id="messageInput" rows="1" maxlength="500" placeholder="Say something to Asia…" autocomplete="off"></textarea>
+        <div id="emojiPanel" class="emoji-panel hidden">
+          <button type="button">😀</button><button type="button">😂</button><button type="button">😍</button><button type="button">😎</button><button type="button">🤝</button><button type="button">🔥</button>
+          <button type="button">❤️</button><button type="button">👍</button><button type="button">🎉</button><button type="button">🌏</button><button type="button">🇮🇩</button><button type="button">🇯🇵</button>
+        </div>
+      </div><button class="send-btn" type="submit" aria-label="Send">↑</button>
+    </form><div class="chat-hint">Enter to send · Shift + Enter for a new line</div>
+  </div>
+</section>
+</main>
+<script type="module" src="app.js?v=3"></script>
+</body></html>
