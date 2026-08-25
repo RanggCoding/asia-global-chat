@@ -11,13 +11,14 @@ import {
 
 // 1) Paste your Firebase Web App config here.
 const FIREBASE_CONFIG = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.firebasestorage.app",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+  apiKey: "AIzaSyDagDhX_gJ79lbkbCAYDxp98IWV1tifcjk",
+  authDomain: "web-app-a7407.firebaseapp.com",
+  databaseURL: "https://web-app-a7407-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "web-app-a7407",
+  storageBucket: "web-app-a7407.firebasestorage.app",
+  messagingSenderId: "786169238703",
+  appId: "1:786169238703:web:4a9fc5c5f9595b87a7305a",
+  measurementId: "G-2K65DFDF47"
 };
 
 const ROOM = "asia-global";
