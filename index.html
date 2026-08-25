@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#08111f">
+  <title>Asia Global Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="loginView" class="login-card">
+      <div class="brand-mark">🌏</div>
+      <p class="eyebrow">ONE ROOM • ASIA</p>
+      <h1>Asia Global Chat</h1>
+      <p class="muted">One big realtime room for people across Asia.</p>
+
+      <form id="joinForm">
+        <label for="nameInput">Your name</label>
+        <input id="nameInput" maxlength="24" autocomplete="nickname"
+               placeholder="e.g. Rangga" required>
+        <label for="countryInput">Country</label>
+        <select id="countryInput">
+          <option value="🇮🇩 Indonesia">🇮🇩 Indonesia</option>
+          <option value="🇲🇾 Malaysia">🇲🇾 Malaysia</option>
+          <option value="🇸🇬 Singapore">🇸🇬 Singapore</option>
+          <option value="🇯🇵 Japan">🇯🇵 Japan</option>
+          <option value="🇰🇷 South Korea">🇰🇷 South Korea</option>
+          <option value="🇵🇭 Philippines">🇵🇭 Philippines</option>
+          <option value="🇹🇭 Thailand">🇹🇭 Thailand</option>
+          <option value="🇻🇳 Vietnam">🇻🇳 Vietnam</option>
+          <option value="🇮🇳 India">🇮🇳 India</option>
+          <option value="🇨🇳 China">🇨🇳 China</option>
+          <option value="🇹🇼 Taiwan">🇹🇼 Taiwan</option>
+          <option value="🇭🇰 Hong Kong">🇭🇰 Hong Kong</option>
+          <option value="🇵🇰 Pakistan">🇵🇰 Pakistan</option>
+          <option value="🇧🇩 Bangladesh">🇧🇩 Bangladesh</option>
+          <option value="🇱🇰 Sri Lanka">🇱🇰 Sri Lanka</option>
+          <option value="🌏 Other Asia">🌏 Other Asia</option>
+        </select>
+        <button class="primary-btn" type="submit">Enter the room →</button>
+      </form>
+      <p class="tiny">Be respectful. Do not share passwords, addresses, or other private information.</p>
+    </section>
+
+    <section id="chatView" class="chat-card hidden">
+      <header class="chat-header">
+        <div class="room-title">
+          <div class="room-icon">🌏</div>
+          <div>
+            <h2>Asia Global Chat</h2>
+            <div class="status"><span class="dot"></span><span id="onlineCount">0</span> online</div>
+          </div>
+        </div>
+        <button id="leaveBtn" class="icon-btn" title="Leave chat" aria-label="Leave chat">↪</button>
+      </header>
+
+      <div id="connectionBanner" class="connection-banner hidden"></div>
+
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <div id="typing" class="typing hidden">Someone is typing…</div>
+
+      <form id="messageForm" class="composer">
+        <button id="emojiBtn" type="button" class="icon-btn" title="Emoji">☺</button>
+        <div class="input-wrap">
+          <textarea id="messageInput" rows="1" maxlength="500"
+                    placeholder="Message everyone in Asia…" autocomplete="off"></textarea>
+          <div id="emojiPanel" class="emoji-panel hidden">
+            <button type="button">😀</button><button type="button">😂</button>
+            <button type="button">😍</button><button type="button">😎</button>
+            <button type="button">🤝</button><button type="button">🔥</button>
+            <button type="button">❤️</button><button type="button">👍</button>
+            <button type="button">🎉</button><button type="button">🌏</button>
+            <button type="button">🇮🇩</button><button type="button">🇯🇵</button>
+          </div>
+        </div>
+        <button class="send-btn" type="submit" title="Send" aria-label="Send">➤</button>
+      </form>
+      <p class="tiny footer-note">Messages are visible to everyone in this room.</p>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
